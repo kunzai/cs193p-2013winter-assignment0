@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		835B615916C5834600DE6F5B /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 835B615816C5834600DE6F5B /* PlayingCardDeck.m */; };
 		835B615C16C5838000DE6F5B /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 835B615B16C5838000DE6F5B /* PlayingCard.m */; };
+		835B615F16C5970F00DE6F5B /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 835B615E16C5970F00DE6F5B /* CardMatchingGame.m */; };
+		835B616416C6C43100DE6F5B /* cardback.png in Resources */ = {isa = PBXBuildFile; fileRef = 835B616316C6C43100DE6F5B /* cardback.png */; };
 		836A328916B87E24008D9C66 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 836A328816B87E24008D9C66 /* Card.m */; };
 		836A328C16B87E52008D9C66 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 836A328B16B87E52008D9C66 /* Deck.m */; };
 		83A386DE16B6E447007F7630 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A386DD16B6E447007F7630 /* UIKit.framework */; };
@@ -44,6 +46,9 @@
 		835B615816C5834600DE6F5B /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCardDeck.m; path = model/PlayingCardDeck.m; sourceTree = "<group>"; };
 		835B615A16C5838000DE6F5B /* PlayingCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCard.h; path = model/PlayingCard.h; sourceTree = "<group>"; };
 		835B615B16C5838000DE6F5B /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCard.m; path = model/PlayingCard.m; sourceTree = "<group>"; };
+		835B615D16C5970F00DE6F5B /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardMatchingGame.h; path = model/CardMatchingGame.h; sourceTree = "<group>"; };
+		835B615E16C5970F00DE6F5B /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMatchingGame.m; path = model/CardMatchingGame.m; sourceTree = "<group>"; };
+		835B616316C6C43100DE6F5B /* cardback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cardback.png; path = ../cardback.png; sourceTree = "<group>"; };
 		836A328716B87E24008D9C66 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = model/Card.h; sourceTree = "<group>"; };
 		836A328816B87E24008D9C66 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = model/Card.m; sourceTree = "<group>"; };
 		836A328A16B87E52008D9C66 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Deck.h; path = model/Deck.h; sourceTree = "<group>"; };
@@ -99,6 +104,8 @@
 		835B615316C57F2800DE6F5B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				835B615D16C5970F00DE6F5B /* CardMatchingGame.h */,
+				835B615E16C5970F00DE6F5B /* CardMatchingGame.m */,
 				836A328716B87E24008D9C66 /* Card.h */,
 				836A328816B87E24008D9C66 /* Card.m */,
 				835B615A16C5838000DE6F5B /* PlayingCard.h */,
@@ -158,6 +165,7 @@
 		83A386E416B6E447007F7630 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				835B616316C6C43100DE6F5B /* cardback.png */,
 				83A386E516B6E447007F7630 /* Matchismo-Info.plist */,
 				83A386E616B6E447007F7630 /* InfoPlist.strings */,
 				83A386E916B6E447007F7630 /* main.m */,
@@ -265,6 +273,7 @@
 				83A386F216B6E447007F7630 /* Default@2x.png in Resources */,
 				83A386F416B6E447007F7630 /* Default-568h@2x.png in Resources */,
 				83A386F716B6E447007F7630 /* MainStoryboard.storyboard in Resources */,
+				835B616416C6C43100DE6F5B /* cardback.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +315,7 @@
 				836A328C16B87E52008D9C66 /* Deck.m in Sources */,
 				835B615916C5834600DE6F5B /* PlayingCardDeck.m in Sources */,
 				835B615C16C5838000DE6F5B /* PlayingCard.m in Sources */,
+				835B615F16C5970F00DE6F5B /* CardMatchingGame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
