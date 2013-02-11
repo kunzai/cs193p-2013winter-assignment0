@@ -71,29 +71,26 @@
     if (card && !card.unplayable) {
         if (!card.faceUp) {
             NSMutableArray *cardsToMatch = [[NSMutableArray alloc] init];
-            // Collect card.contents for each matched card to allow for easier display
-            NSMutableArray *matchedCardContents = [[NSMutableArray alloc] init];
-            [matchedCardContents addObject:card.contents];
             
             // Collect the other face-up cards in array to match
             for (Card *otherCard in self.cards) {
                 if (!otherCard.unplayable && otherCard.faceUp) {
                     [cardsToMatch addObject:otherCard];
-                    [matchedCardContents addObject:otherCard.contents];
                 }
             }
             NSLog(@"flipCardAtIndex found %d face-up cards", [cardsToMatch count]);
             
             // If our card  + other face-up cards == match count, check for a match
-            if ([cardsToMatch count] == self.numberToMatch - 1) { 
+            if ([cardsToMatch count] == self.numberToMatch - 1) {
                 if ([card match:cardsToMatch]) {
+                    [cardsToMatch insertObject:card atIndex:0]; // Add our card for message output
                     self.score += [card match:cardsToMatch] * MATCH_BONUS * self.numberToMatch; // MATCH_BONUS scales with match type
                     card.unplayable = YES;
                     for (Card * matchedCard in cardsToMatch) {
                         matchedCard.unplayable = YES;
                     }
                     self.lastFlipMessage = [NSString stringWithFormat:@"Match! %@ - gain %d points",
-                                            [matchedCardContents componentsJoinedByString:@", "],
+                                            [cardsToMatch componentsJoinedByString:@", "],
                                             [card match:cardsToMatch] * MATCH_BONUS * self.numberToMatch];
                                         
                 } else {
@@ -104,7 +101,7 @@
                     }
                     self.score -= MISMATCH_PENALTY;
                     self.lastFlipMessage = [NSString stringWithFormat:@"Mismatch: %@ do not match. Lose %d points.",
-                                            [matchedCardContents componentsJoinedByString:@", "],
+                                            [cardsToMatch componentsJoinedByString:@", "],
                                             MISMATCH_PENALTY];
                 }
             } else {
